@@ -56,4 +56,15 @@ def even_squares(numbers: list[int]) -> set[int]:
     return {n ** 2 for n in numbers if n % 2 == 0}
 
 
-def
+def cubes(numbers: list[int]) -> dict[int, int]:
+    """Return a dict mapping each number to its cube (dict comprehension)."""
+    return {n: n ** 3 for n in numbers}
+
+
+if __name__ == "__main__":
+    # Keep all input() and print() calls inside this block, otherwise the
+    # autograder cannot import your file.
+    print(f"Squares: {squares(NUMBERS)}")
+    print(f"Positives: {positives(NUMBERS)}")
+    print(f"Even squares: {even_squares(NUMBERS)}")
+    print(f"Cubes: {cubes(NUMBERS)}")
